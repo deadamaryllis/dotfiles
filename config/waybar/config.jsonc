@@ -1,0 +1,117 @@
+// -*- mode: jsonc -*-
+{
+    "height": 30,
+    "spacing": 0,
+    "modules-left": [
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "custom/media",
+        "network",
+        "memory",
+        "cpu",
+        "temperature",
+        "hyprland/language",
+        "pulseaudio",
+        "backlight",
+        "battery",
+        "clock",
+        "tray",
+        "custom/power"
+    ],
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "format": "󰥔  {:%H:%m}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "󰃭  {:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "  {usage}%",
+        "tooltip": true
+    },
+    "memory": {
+        "format": "  {}%"
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "  {temperatureC}°C"
+    },
+    "backlight": {
+        "format": "󰖨  {percent}%"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "󰁾  {capacity}%",
+        "format-full": "󰁹  {capacity}%",
+        "format-charging": "󰂄  {capacity}%",
+        "format-plugged": "󰚥  {capacity}%",
+        "format-alt": "  {time} left"
+    },
+    "network": {
+        "format-wifi": "  {essid} ({signalStrength}%)",
+        "format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format": "{ifname} via {gwaddr}",
+        "format-linked": "{ifname} (No IP)",
+        "format-disconnected": "Disconnected",
+        "format-alt": "󰩠  {ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{icon}  {volume}%   {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": "{icon} {format_source}",
+        "format-muted": "󰖁  {volume}%   {format_source}",
+        "format-source": "󰍬  {volume}%",
+        "format-source-muted": "󰍭  {volume}%",
+        "format-icons": {
+            "headphone": "󰕾",
+            "hands-free": "󰕾",
+            "headset": "󰕾",
+            "phone": "󰕾",
+            "portable": "󰕾",
+            "car": "󰕾",
+            "default": "󰕾"
+        },
+        "on-click": "pavucontrol"
+    },
+	"hyprland/language": {
+        "format-en": "󰌌  US",
+        "format-ro": "󰌌  RO",
+        "format-ru": "󰌌  RU"
+    }, 
+    
+    "custom/media": {
+        "format": "{icon}   {text}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        //"exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/power": {
+        "format" : "󰐥",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"shutdown": "shutdown",
+			"reboot": "reboot",
+			"suspend": "systemctl suspend",
+			"hibernate": "systemctl hibernate"
+		},
+    },
+    "custom/separator": {
+        "format": "|",
+        "interval": "once",
+        "tooltip": false
+    }
+    }
