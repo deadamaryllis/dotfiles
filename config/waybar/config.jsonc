@@ -6,12 +6,15 @@
         "hyprland/workspaces",
         "hyprland/window"
     ],
+    //"modules-center": [
+    //	"clock"
+    //],
     "modules-right": [
         "custom/media",
         "network",
         "memory",
         "cpu",
-        "temperature",
+        // "temperature",
         "hyprland/language",
         "pulseaudio",
         "backlight",
@@ -24,9 +27,9 @@
         "spacing": 10
     },
     "clock": {
-        "format": "󰥔  {:%H:%m}",
+        "format": "󰥔  {:%H:%M}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "󰃭  {:%Y-%m-%d}"
+        "format-alt": "󰃭  {:%d.%m.%Y   󰥔  %H:%M}"
     },
     "cpu": {
         "format": "  {usage}%",
@@ -43,6 +46,7 @@
         "format": "󰖨  {percent}%"
     },
     "battery": {
+        "interval": 5,
         "states": {
             "warning": 30,
             "critical": 15
@@ -51,7 +55,7 @@
         "format-full": "󰁹  {capacity}%",
         "format-charging": "󰂄  {capacity}%",
         "format-plugged": "󰚥  {capacity}%",
-        "format-alt": "  {time} left"
+        "format-alt": "󰁾  {capacity}%     {time}   󱐋  {power:4.2f} W"
     },
     "network": {
         "format-wifi": "  {essid} ({signalStrength}%)",
@@ -91,7 +95,7 @@
         "max-length": 40,
         "format-icons": {
             "spotify": "",
-            "default": "🎜"
+            "default": ""
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
