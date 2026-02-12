@@ -1,0 +1,64 @@
+* {
+    background-color:           rgba (0, 0, 0, 0.0);
+    winbg:                      rgba (0, 0, 0, 0.65);
+	itembg:                     rgba (0, 0, 0, 1);
+	text-color:                 #ffffff;
+	selbg:                      rgba (255, 255, 255, 0.1);
+}
+
+#window {
+    background-color: 			@winbg;
+	children: 					[mainbox];
+	height:                     765px;
+}
+
+#mainbox {
+	children: 					[ entry,message,listview,mode-switcher ];
+}
+
+#entry {
+	expand: 					false;
+	text-color:					#ffffff;
+    padding: 					11px 20px ; 				//padding between two lines
+	border: 					0 0 1px;
+	border-color: 				@selbg;
+}
+
+#sidebar {
+	expand: false;
+}
+
+#textbox {  													// mesg box
+	horizontal-align: 			0;
+	background-color: 			silver;
+    padding: 					1px 1px 1px 1px ; 				
+	text-color:                 #000;
+}	
+
+#listview {
+    border:       				0px 0px 0px ;
+    border-color: 				grey;
+	padding:					0px 0px 0px 0px;
+}
+
+
+#mode-switcher {
+    border:       				1px 0px 0px 0px;
+    border-color: 				@selbg;
+}
+
+button { 
+	padding: 11px; 
+}
+
+#button.selected {
+	background-color:           @selbg;
+}
+
+#element {
+    padding: 					7px 20px ; 				
+}
+
+#element.selected {
+	background-color:           @selbg;
+}
