@@ -1,0 +1,13 @@
+#root.root {--ntb-btn-height: 20px;}
+#root.root {--btn-border-radius: 2px;}
+#root.root {--bottom-bar-height: 28px;}
+#root.root {--tabs-pinned-height: 20px;}
+#root.root {--tabs-pinned-width: 20px;}
+#root.root {--tabs-height: 20px;}
+#root.root {--general-margin: 0px;}
+#root.root {--general-border-radius: 0px;}
+
+.Tab .title {
+font-family: Terminus;
+font-size: 9pt;
+}
