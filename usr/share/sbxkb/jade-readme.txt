@@ -1,0 +1,2 @@
+These are custom indicators for the three input languages I use on my computers. sbxkb by default uses flags, but I wanted simple text indicators to be in line with the Papirus Dark symbolic icon theme. These icons use the Inter Bold font at size 13, with the color #dfdfdf and neatly arranged into sbxkb's 21x14 flag template. An xcf file is provided so you can make your own custom indicators in this style.
+Unfortunately sbxkb does not seem to read the flags from .local/share, so you have to replace them in /usr/share/sbxkb.
