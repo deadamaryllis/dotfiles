@@ -11,6 +11,7 @@
 	children: 					[mainbox];
 	// height:                     393px; //terminus
 	height:                     378px; //monaco 9
+	width:                      550px;
 }
 
 #mainbox {
