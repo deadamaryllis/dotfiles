@@ -27,6 +27,11 @@
   "break",
   "break",
   */
+          {
+            "type": "host",
+            "key": " ",
+            "keyColor": "35",  // = color3
+        },
         {
             "type": "os",
             "key": " ",
@@ -39,7 +44,6 @@
         },
         {
             "type": "packages",
-            "format": "{}",
             "key": " ",
             "keyColor": "35",  
         },
@@ -75,7 +79,8 @@
           "shell": "/bin/zsh",
           // "text": "echo Plan 9\\? How about you plan a night with- wait you did\\?",
           // "text": "echo Takes unix box back out of \\/dev\\/null\\.\\.\\.",
-          "text": "echo SHOOT UP YOUR LOCAL ISRAEL EMBASSY",
+          // "text": "echo SHOOT UP YOUR LOCAL ISRAEL EMBASSY",
+          "text": "echo It\\'s divine fuckin intellect I\\'m tellin\\ ya\\.",
           "format": "{1}",
         },
     ]
