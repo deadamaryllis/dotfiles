@@ -1,0 +1,82 @@
+{
+    "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "logo": {
+        "type": "auto",
+        "source": "~/Documents/ascii/plan9.txt",
+        /* "height": 22,
+        "padding": {
+            "top": 0,
+            "right": 0,
+            "bottom": 0
+        },*/
+        "color": { "1": "white" }
+    },
+    "display": {
+        "separator": " "
+    },
+    "modules": [
+      /*
+	"break",
+	"break",
+  "break",
+  "break",
+  "break",
+  "break",
+  "break",
+  "break",
+  "break",
+  "break",
+  */
+        {
+            "type": "os",
+            "key": " ",
+            "keyColor": "35",  // = color3
+        },
+        {
+            "type": "kernel",
+            "key": " ",
+            "keyColor": "35",
+        },
+        {
+            "type": "packages",
+            "format": "{}",
+            "key": " ",
+            "keyColor": "35",  
+        },
+        {
+            "type": "shell",
+            "key": " ",
+            "keyColor": "35", 
+        },
+        {
+            "type": "terminal",
+            "key": " ",
+            "keyColor": "35", 
+        },
+        {
+            "type": "wm",
+            "key": " ",
+            "keyColor": "35", 
+        },
+        {
+            "type": "uptime",
+            "key": " ",
+            "keyColor": "35", 
+        },
+        {
+            "type": "media",
+            "key": "󰝚 ",
+            "keyColor": "35", 
+        },
+        "break",
+        { 
+          "type": "command",
+          "key":  " ",
+          "shell": "/bin/zsh",
+          // "text": "echo Plan 9\\? How about you plan a night with- wait you did\\?",
+          // "text": "echo Takes unix box back out of \\/dev\\/null\\.\\.\\.",
+          "text": "echo SHOOT UP YOUR LOCAL ISRAEL EMBASSY",
+          "format": "{1}",
+        },
+    ]
+}
