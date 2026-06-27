@@ -73,8 +73,16 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Shift+Return exec kitty --class=floatingterm
 # Make it floating and set size
 for_window [class="floatingterm"] floating enable
-for_window [class="floatingterm"] resize set 520 370
-for_window [class="floatingterm"] move position center
+# #for_window [class="floatingterm"] resize set 520 370
+for_window [class="floatingterm"] resize set 600 400
+for_window [class="floatingterm"] move position 740px 10px
+
+# bindsym $mod+Shift+Return exec xfce4-terminal --title=floatingterm
+# Make it floating and set size
+# for_window [title="floatingterm"] floating enable
+# #for_window [title="floatingterm"] resize set 520 370
+# for_window [title="floatingterm"] resize set 600 400
+# for_window [title="floatingterm"] move position 740px 10px
 
 # kill focused window
 bindsym $mod+Shift+q kill
