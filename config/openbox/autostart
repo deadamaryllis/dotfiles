@@ -1,0 +1,72 @@
+# start compositor
+# picom --dithered-present &
+XDG_CONFIG_HOME=$HOME/.config/picom-ob picom &
+
+# start panel
+tint2 -c ~/.config/tint2/horizontal.tint2rc &
+# snixembed --fork &
+
+# start pulseaudio (sound plugin)
+# the correct way to run pulseaudio is to do "systemctl --user enable pulseaudio"
+# pulseaudio --start &
+
+# start power manager
+XDG_CONFIG_HOME=$HOME/.config/xfpm-gtk xfce4-power-manager &
+
+# start network manager icon
+nm-applet &
+
+# start clipboard manager
+# xfce4-clipman &
+greenclip daemon &
+
+# start sound icon
+pnmixer &
+
+# start bluetooth icon
+# blueman-applet &
+
+# start polkit for running sudo apps from menus
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+
+# start xfce notifications service
+# /usr/lib/xfce4/notifyd/xfce4-notifyd &
+XDG_CONFIG_HOME=$HOME/.config/dunst-ob dunst &
+# dunst's better
+
+# keep touchpad enabled while typing
+# xinput set-prop 11 303 0 &
+
+# change wallpaper from reddit
+# /usr/local/bin/wallpaper-reddit --startup --lottery &
+
+# keyboard layouts
+setxkbmap -layout us,ro,ru -variant ,std, -option grp:alt_shift_toggle &
+# ibus-daemon -drxR &
+sleep 2 && sbxkb &
+
+# nosleep
+# /home/skip/bin/nosleep.sh &
+
+# start conky 
+# /home/jade/bin/conky.sh &
+
+systemctl --user start xmousepasteblock &
+
+killall playerctl &
+pgrep -af "spotify-notifications" | awk '{print $1}' | xargs -r kill &
+sleep 6 && bash /home/jade/bin/spotify-notifications.sh &
+
+opensnap --daemon &
+
+killall redshift &
+sleep 2 && redshift-gtk &
+
+# xcape mask super key as ctrl+alt+q to open openbox root menu
+xcape -e 'Super_L=Control_L|Alt_L|Q' &
+
+# fix screen tearing on nvidia cards
+# nvidia-settings --assign CurrentMetaMode="nvidia-auto-select +0+0 { ForceFullCompositionPipeline = On }"
+
+# restore wallpaper from last session
+nitrogen --restore &
